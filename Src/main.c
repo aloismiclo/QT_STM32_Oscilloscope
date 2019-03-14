@@ -415,14 +415,14 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
 	switch (Data){
-	case 0x32:
+	case 0x30:
 		if(HAL_GPIO_ReadPin(GPIOD,LD6_Pin)){
 			HAL_GPIO_WritePin(GPIOD,LD6_Pin,0);
 		}else{
 			HAL_GPIO_WritePin(GPIOD,LD6_Pin,1);
 		}
 		break;
-	case 0x34 :
+	case 0x31:
 		if(HAL_GPIO_ReadPin(GPIOD,LD4_Pin)){
 			HAL_GPIO_WritePin(GPIOD,LD4_Pin,0);
 		}else{
@@ -430,14 +430,14 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
 		}
 		break;
 
-	case 0x38 :
+	case 0x32:
 		if(HAL_GPIO_ReadPin(GPIOD,LD3_Pin)){
 			HAL_GPIO_WritePin(GPIOD,LD3_Pin,0);
 		}else{
 			HAL_GPIO_WritePin(GPIOD,LD3_Pin,1);
 		}
 		break;
-	case 0x36 :
+	case 0x33:
 		if(HAL_GPIO_ReadPin(GPIOD,LD5_Pin)){
 			HAL_GPIO_WritePin(GPIOD,LD5_Pin,0);
 		}else{
